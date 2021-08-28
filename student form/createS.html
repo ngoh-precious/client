@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="WE.JS">
+    </script> <script defer src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+        </script> <script defer src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <title>STUDENT signup</title>
+ </head>
+ <body>
+     <div class="bg-img" id="login_div">
+         <div class="container">
+             <header>STUDENT ACCOUNT</header>
+             <form action="#">
+                <div class="field">
+                    <span></span>
+                    <input type="text" required placeholder="Username">
+                </div>
+                <div class="pass">
+                   <span></span>
+                   <input type="email" id="email" required placeholder="Email Address" />
+               </div>
+                <div class="field space">
+                   <span></span>
+                   <input type="Password" id="password" maxlength="35" class="password"required placeholder="Password" />
+                   <span class="show">SHOW</span>
+               </div>
+                <div class="field space">
+                    <button onclick="login()">Login to Account</button>
+                </div>
+                <div class="signup">Already have account?
+                    <a href="Sign-up-s.html">Sign-Up</a>
+                </div>
+             </form>
+         </div>
+     </div> 
+     <div id="user_div" class="loggedin-div">
+        <h3>Welcome User</h3>
+        <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+        <button onclick="logout()">Logout</button>
+      </div>
+    
+    
+    
+      <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+    
+      <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyDpKbXoLxUqQet4NEYxfm4zXKZwnskxzvI",
+          authDomain: "school-sams.firebaseapp.com",
+          projectId: "school-sams",
+          storageBucket: "school-sams.appspot.com",
+          messagingSenderId: "11829773889",
+          appId: "1:11829773889:web:0d9da5d812fecd8d0868c0",
+          measurementId: "G-EVGMP21YR7"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      </script>
+      <script src="WE.JS"></script>
+
+     <script>
+         const pass_field = document.querySelector('.password');
+         const show_btn = document.querySelector('.show');
+         show_btn.addEventListener('click', function(){
+             if(pass_field.type === "password"){
+                 pass_field.type = "text";
+                 show_btn.style.color = "#3498db";
+                 show_btn.textContent = "HIDE"
+             }else{
+                pass_field.type = "password";
+                show_btn.style.color = "#222";
+                show_btn.textContent = "SHOW"
+             }
+         });
+       
+</script>
+</body>
+</html>

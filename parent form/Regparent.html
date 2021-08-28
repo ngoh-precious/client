@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>RegisterP</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style2.css" />
+</head>
+
+<body>
+
+    <h1 class="login_farm">Sign In As A Parent</h1>
+
+    <div class="login_form">
+        <form action="">
+          <div class="error-txt">This is an error message</div>
+            <label for="Email" class="header_both">Email</label>
+            <input type="email" name="firstname" placeholder="Enter valid Email...">
+
+            <label for="password" class="header_both">Password</label>
+            <input type="password" name="text" minlength="7" maxlength="50" placeholder="enter Password">
+            <input type="submit" value="Login">
+        </form>
+        <a href="createP.html" style="color: white; font-size: large; list-style-type: none;">Register..</a>
+    </div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDE54S1xf9Ys-9cPfL0j2o7AIjBdT6a3A8",
+    authDomain: "sams-6dd33.firebaseapp.com",
+    projectId: "sams-6dd33",
+    storageBucket: "sams-6dd33.appspot.com",
+    messagingSenderId: "936220404156",
+    appId: "1:936220404156:web:23a7e7d6869ed1b535e3b9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+</body>
+
+</html>

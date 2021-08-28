@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="s.css">
+    <title>SIGN-IN</title>
+</head>
+<body>
+     <div class="bg-img">
+         <div class="container">
+             <header>SIGN-IN WITH TEACHERS ACCOUNT</header>
+             <form action="#">
+                 <div class="field">
+                     <span></span>
+                     <input type="text" id="email" required placeholder="Email or Phone">
+                 </div>
+                 <div class="field space">
+                    <span></span>
+                    <input type="Password" id="password" maxlength="35" class="password"required placeholder="Password">
+                    <span class="show">SHOW</span>
+                </div>
+                <div class="pass">
+                </div>
+                <div class="field space">
+                    <input type="submit" value="LOGIN" >
+                </div>
+                <div class="signup">Don't have account?
+                    <a href="createT.html">Sign-In Now</a>
+                </div>
+             </form>
+         </div>
+     </div> 
+
+     <script>
+         const pass_field = document.querySelector('.password');
+         const show_btn = document.querySelector('.show');
+         show_btn.addEventListener('click', function(){
+             if(pass_field.type === "password"){
+                 pass_field.type = "text";
+                 show_btn.style.color = "#3498db";
+                 show_btn.textContent = "HIDE"
+             }else{
+                pass_field.type = "password";
+                show_btn.style.color = "#222";
+                show_btn.textContent = "SHOW"
+             }
+         });
+     </script>
+     <script defer src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCB10W6N9UGpy94wlmSmVHGsLj904IlqjY",
+    authDomain: "sams-c9bee.firebaseapp.com",
+    projectId: "sams-c9bee",
+    storageBucket: "sams-c9bee.appspot.com",
+    messagingSenderId: "300483945560",
+    appId: "1:300483945560:web:ca89d14ae622899b6b962d",
+    measurementId: "G-F667SDBB3W"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</body>
+</html>
